@@ -1,7 +1,7 @@
 /***************************************************************************************************************
 *  
-*   Objetivo: Determinar si in número es perfecto o no a través de una función
-*             Un número es perfecto cuando el número es igual a la suma de sus divisones.
+*   Objetivo: Determinar si un número es perfecto o no a través de una función
+*             Un número es perfecto cuando el número es igual a la suma de sus divisores.
 *
 *   Entrada : entero n
 *
@@ -22,3 +22,28 @@ if (suma==n){
 else{
     document.write("No es perfecto")
 }
+
+/*
+function leerEntero(msg) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<1)
+    return parseInt(numero)
+}
+
+// Con arrays y sus métodos
+function esPerfecto(n) {
+    let numeros=Array.from({length:numero-1},()=>i+1)
+    return numeros.filter(elemento=>n%elemento===0).reduce((anterior,actual)=>anterior+actual)===n
+}
+
+let n=leerEntero("Numero: ")
+let salida
+if (esPerfecto(n))
+    salida=`El numero ${n} es perfecto`
+else
+    salida=`El numero ${n} no es perfecto`
+
+document.write(salida)
+*/

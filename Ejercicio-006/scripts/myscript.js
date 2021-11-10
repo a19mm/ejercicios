@@ -15,7 +15,16 @@
 *
 ***************************************************************************************************************/
 
-let edad=parseInt(prompt("dime tu edad: "));
+function leerEntero(msg) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0)
+    return parseInt(numero)
+}
+
+//let edad=parseInt(prompt("dime tu edad: "));
+let edad=leerEntero("Dime tu edad: ");
 
 if(edad<30 && edad>18)
     document.write("Ponte a trabajar")
@@ -25,4 +34,20 @@ if(edad<30 && edad>18)
             document.write("Descansa")
     
     if(edad>=120 || edad<0)
-    document.write("Error")
+        document.write("Error")
+
+// Con switch
+/*
+
+let salida=""
+switch (true) {
+    case edad<30 && edad>18: salida="Ponte a trabajar"
+                             break
+    case edad>=30 && edad<=64: salida="Quiero jubilarme"
+                               brak
+    case edad>=65: salida="Descanda"
+                           break
+    default: salida="Error"
+
+}
+*/

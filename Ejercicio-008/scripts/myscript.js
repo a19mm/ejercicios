@@ -13,10 +13,40 @@
 *
 ***************************************************************************************************************/
 
-let num=parseInt(prompt("Dime el número: "));
+function leerEntero(msg) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0)
+    return parseInt(numero)
+}
+
+//let num=parseInt(prompt("Dime el número: "));
+
+let numero=leerEntero("Dime el número: ")
 
 for(let i=0;i<=num;i+=2){
     // Ou ben: if(i%2!=0) continue
     //salida +=i+" " 
         document.write(i+" ");
 }
+
+// Con while
+/*
+let i=2
+while (i<=numero) {
+   document.write(`${i} `)
+   i+=2
+}
+*/
+
+//Con do...while
+/*
+let i=2
+if (numero>=2) {
+    do {
+        document.write(`${i} `)
+        i+=2
+    }  while (i<=numero)
+}
+*/

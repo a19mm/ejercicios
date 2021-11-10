@@ -15,13 +15,19 @@
 *
 ***************************************************************************************************************/
 
-let num;
-
-do{
-num=prompt("Dame número entre 1 y 9: ");
-}while (num<=0 || num>10);
-
-for(let i=0;i<=10;i++){
-   
-    document.write(i+" x "+num+" = "+(num*i)+"<br>");
+function leerEntero(msg,limiteInferior,limiteSuperior) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0||(parseInt(numero)<limiteInferior&&parseInt(numero)>limiteSuperior))
+    return parseInt(numero)
 }
+
+let num=leerEntero("Dame número entre 1 y 9: ",1,9);
+let salida="<table>"
+for(let i=0;i<=10;i++)
+    //document.write(i+" x "+num+" = "+(num*i)+"<br>");
+    salida+=`<tr><td>${i}</td><td>x</td><td>${num}</td><td>=</td><td>${num*i}</td></tr>`
+salida+="</table>"
+
+document.write(salida)

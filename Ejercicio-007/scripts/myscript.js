@@ -10,10 +10,23 @@
 *
 *
 ***************************************************************************************************************/
-let numero=parseInt(prompt("número: "))
+
+function leerEntero(msg) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0)
+    return parseInt(numero)
+}
+
+//let numero=parseInt(prompt("número: "))
+
+let numero=leerEntero("Número: ")
+
 let salida=""
 for(let i=0;i<=numero;i++){ 
     salida+=i+" "
 }
+
 document.write(salida)
 

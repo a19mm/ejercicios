@@ -11,7 +11,6 @@
 *
 ***************************************************************************************************************/
 
-
 let mayor=0;
 let menor=0;
 function dato(){
@@ -38,3 +37,34 @@ for(let i=0;i<vector.length;i++){
 document.write("<br> Media dos números ")
 let media=vector.reduce((anterior, actual)=>anterior+actual/vector.length);
 document.write(media);
+
+// Con el metodo reduce
+/*
+function leerEntero(msg) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0)
+    return parseInt(numero)
+}
+
+function aleatorio(min,max){
+    return Math.floor(min+(max-min)*Math.random())
+}
+
+let n=leerEntero("Numero de aleatorios: ")
+
+const vector=Array.from({length:n},()=>aleatorio(1,100))
+let maximo=vector.reduce((anterior,actual)=>actual>anterior?actual:anterior)
+let minimo=vector.reduce((anterior,actual)=>actual>anterior?anterior:actual)
+let media=vector.reduce((anterior,actual)=>actual+anterior)/vector.length
+
+document.write(`<p>En los numeros ${vector.joint(,)}</p><p>El maximo es ${maximo}</p><p>El minimo es ${minimo}</p><p>La media es ${media}</p> `)
+*/
+
+// Con el objeto Math
+/*
+let maximo=Math.max(...vector)
+let minimo=Math.min(...vector)
+let media=vector.reduce((anterior,actual)=>actual+anterior)/vector.length
+*/

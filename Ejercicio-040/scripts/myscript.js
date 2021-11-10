@@ -18,3 +18,6 @@ function parimpar(n){
     }
 }
 parimpar(n);
+
+const par=x=>x%2===0
+const impar=x=>x%2===1

@@ -18,6 +18,9 @@ let faren=parseInt(prompt("Dime los grados Fahrenheit: "));
 
 let celsius= (5/9)*(faren-32);
 
+// Es preferible emplear una funcion
+// let celsius=faren=>(5/9)*(faren-32)
+
 /*if (celsius=>25){
     document.write("La temperatura a Celsius es de "+celsius+");
 

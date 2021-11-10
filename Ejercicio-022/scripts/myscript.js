@@ -13,13 +13,20 @@
 let num1=prompt("Dime el primer número: ");
 let num2=prompt("Dime el segundo número: ");
 let num3=prompt("Dime el tercer número: ");
-let max=0;
 
-if(num1>max)
-    max=num1;
-    if(num2>max)
+let max=num1;
+if(num2>max)
     max=num2;
-    if(num3>max)
-        max=num3;
+if(num3>max)
+   max=num3;
 
-    document.write("Has introducido tres números: "+num1+", "+num2+" y "+num3+". El mayor de ellos es "+max);
+//document.write("Has introducido tres números: "+num1+", "+num2+" y "+num3+". El mayor de ellos es "+max);
+document.write(`Has introducido tres números: ${num1}, ${num2} y ${num3}. El mayor de ellos es ${max}`);
+
+// Con el objeto Math
+//let maximo=Math.max(num1,num2,num3)
+
+// Con un array y el metodo reduce con una arrow function 
+// let numeros=[num1,num2,num3]
+// let maximo=numeros.reduce((anterior,actual)=>actual>anterior?actual:anterior)
+

@@ -19,3 +19,7 @@ for(let i=0;i<array.length;i++){
     ar3[i]=array[i]+array2[i];
 }
 document.write("La suma de ["+array+"] y ["+array2+"] es de "+ ar3);
+
+// Con metodos del array
+//const suma=array.map((elemento,i)=>elemento+array2[i])
+//document.write(`La suma de los vectores [${array.join(',')}] y [${array.join(',')}] es [${suma.join(',')}]`)

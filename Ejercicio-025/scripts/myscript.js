@@ -17,8 +17,10 @@ var mayor=0;
 do{
     numero=prompt("Dime un número");
     array.push(numero);
-    
-} while(numero!=0)
+} while(numero!==0)
+
+// Cuando se mete el cero, hay que quitarlo
+array.pop()
 
 document.write("El mayor de ")
 for(let i=0;i<array.length;i++){
@@ -28,3 +30,13 @@ for(let i=0;i<array.length;i++){
         
     }
 } document.write("es el "+mayor)
+
+// Con el metodo reduce y una arrow function
+
+// let maximo=array.reduce((anterior,actual)=>actual>anterior?actual:anterior)
+// document.write(`El mayor de ${array.join(',')} es ${maximo}`)
+
+// Con la libreria Math
+
+// let maximo=Math.max(...array)
+// document.write(`El mayor de ${array.join(',')} es ${maximo}`)

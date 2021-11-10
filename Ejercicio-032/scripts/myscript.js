@@ -8,6 +8,7 @@
 *   Salida  : La suma de 1+2+3+...n es XXXX
 *
 ***************************************************************************************************************/
+
 let numero=parseInt(prompt("di numero"));
 document.write("La suma de: ");
 let suma=0;
@@ -23,3 +24,17 @@ if(suma == resultado){
 }else{
     document.write("non coincide");
 }
+
+// Con arrays
+/*
+function leerEntero(msg) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0)
+    return parseInt(numero)
+}
+
+let n=leerEntero("Sumar los numeros entre 1 y ....: ")
+(Array.from({length:n},()=>i+1).reduce((anterior,actual)=>anterior+actual)=== n*(n+1)/2)?document.write("<br>Coincide. "+resultado):document.write("non coincide");
+*/

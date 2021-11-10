@@ -14,8 +14,8 @@ let cadena;
 let salida=""
 do{
     cadena=prompt("Dame una cadena de texto")
-    if(cadena!="cancelar")
+    if(cadena!=="cancelar")
     salida+=cadena+"<br> "
-}while(cadena!="cancelar")
+}while(cadena!=="cancelar")
 
 document.write(salida);

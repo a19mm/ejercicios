@@ -13,3 +13,5 @@
 ***************************************************************************************************************/
 let nombre=window.prompt("dime tu nombre");
 document.write("Bienvenido, "+nombre);
+
+// document.write(`Bienvenido, ${nombre}`);

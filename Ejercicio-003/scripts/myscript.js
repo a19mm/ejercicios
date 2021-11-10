@@ -14,3 +14,5 @@
 let nombre=window.prompt("Dime tu nombre")
 let edad=window.prompt("Dime edad ")
 console.log("Tu nombre es "+nombre+" y tienes "+edad+" años")
+
+//console.log(`Tu nombre es ${nombre} y tienes ${edad} años`)

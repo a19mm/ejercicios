@@ -16,19 +16,30 @@
 *
 *
 ***************************************************************************************************************/
-let numero;
-let parrafo="";
+
+function leerEntero(msg,limiteInferior) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0||parseInt(numero)<limiteInferior)
+    return parseInt(numero)
+}
+
+let numero=leerEntero("Dame un número entero: ",1)
 let salida="";
-do{
-numero=prompt("Dame un número entero ")
-}while(numero<1 || numero >20 && isNaN(numero) || Number.isInteger(parseFloat(numero)))
 
 for(let i=1;i<=numero;i++){
-    parrafo="<p>";
-    for(let j=1;j<=i;j++){
-salida+=i+" "; 
-    }
-    parrafo+="</p>"
-    salida+=parrafo;
+    salida+="<p>";
+    for(let j=1;j<=i;j++)
+        salida+=i+" "; 
+    salida+="</p>"
 }
-document.write(parrafo)
+document.write(salida)
+
+// Con arrays
+/*
+let salida
+for(let i=1;i<=numero;i++)
+   salida+="<p>"+Array.from({length:i},function () { return this.length}).join(" ")+"</p>"
+document.write(salida)
+*/

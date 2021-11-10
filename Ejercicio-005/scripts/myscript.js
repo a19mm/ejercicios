@@ -22,16 +22,20 @@
 // document.write("La resta de "+num1+"y "+num2+" es "+(num1-num2))
 // document.write("La multiplicación de "+num1+"y "+num2+" es "+(num1*num2))
 
-//
-
-let a=prompt("Di número 1")
-let b= prompt("Di número 2")
+function leerEntero(msg) {
+    let numero
+    do {
+       numero=prompt(msg)
+    } while (isNaN(numero)||!Number.isInteger(parseFloat(numero))||parseInt(numero)<0)
+    return parseInt(numero)
+}
 
 function suma(a,b){
   
     let resultado=a+b;
     return resultado;
 }
+
 function resta(a,b){
     
     let resultado=a-b;
@@ -48,6 +52,28 @@ function div(a,b){
     let resultado=parseInt(a/b);
     return resultado;
 }
+
+//let a=prompt("Di número 1")
+//let b= prompt("Di número 2")
+let a=leerEntero("Di número 1")
+let a=leerEntero("Di número 1")
+
+/*
+// Con arrow functions
+
+const sumar=(a,b)=>a+b
+const restart=(a,b)=>a-b
+const multiplicar=(a,b)=>a*b
+const dividir=(a,b)=> { if (b!===0) 
+                            return a/b
+                        else 
+                            return "Error"
+                       }
+document.write(`${a} + ${b} = ${sumar(a,b)}`);
+document.write(`${a} - ${b} = ${restart(a,b)}`);
+document.write(`${a} * ${b} = ${multiplicar(a,b)}`);
+document.write(`${a} / ${b} = ${dividir(a,b)}`);
+*/
 
 document.write(a+" + "+b+" = "+suma(a,b));
 document.write("<br>"+a+" - "+b+" = "+resta(a,b));

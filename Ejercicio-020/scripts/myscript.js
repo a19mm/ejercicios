@@ -17,3 +17,5 @@ let sobran=caramelos%peques;
 let caen=caramelos/peques;
 document.write("Cada niño recibe "+caen+" caramelos<br>");
 document.write("En total sobran "+sobran+" caramelos.");
+//document.write(`Cada niño recibe ${caen} caramelos<br>");
+//document.write(`En total sobran ${sobran} caramelos.");

@@ -12,28 +12,27 @@
 *
 ***************************************************************************************************************/
 function pedirEntero(i){
-
-let numero;
+    let numero;
     do{
         numero=prompt("Dame el número +i")
-
-} while(isNaN(numero)||Number.isInteger(parseFloat(numero)))
-return numero;
+    } while(isNaN(numero)||Number.isInteger(parseFloat(numero)))
+    return numero;
 }
 
+let filas
+let columnas
 do{
-let filas=pedirEntero(1)
-let columnas=pedirEntero(2)
-
-}while(filas<0||columnas<0)
+    filas=pedirEntero(1)
+    columnas=pedirEntero(2)
+} while(filas<0||columnas<0)
 
 salida="<table border>"
 for(let i=1;i<=filas;i++){
     salida+="<tr>"
-    for(let j=1;j<=columnas;j++){
-        salida+="<td>"+(i*j)+"</td>"
-    }
-    salida+="</tr"
+    for(let j=1;j<=columnas;j++)
+        salida+=`<td>${i*j}</td>`
+    salida+="</tr>"
 }
 salida+="</table>"
 document.write(salida)
+
